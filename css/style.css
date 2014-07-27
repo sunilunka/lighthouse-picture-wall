@@ -1,16 +1,48 @@
-.member, body #team-members {
-  float: left;
-  margin: 10px;
-  padding: 6px; }
+#wr {
+  background-image: url("../images/Warren_Russell.JPG"); }
 
-.name, body #team-members div {
-  text-align: center; }
+#wr:hover {
+  background-image: url("../images/avatar.png"); }
+
+#as {
+  background-image: url("../images/Andre_Soesilo.JPG"); }
+
+#as:hover {
+  background-image: url("../images/avatar.png"); }
+
+#ak {
+  background-image: url("../images/Andrew_Kong.JPG"); }
+
+#ak:hover {
+  background-image: url("../images/avatar.png"); }
+
+#bs {
+  background-image: url("../images/Barrett_Stutzman.JPG"); }
+
+#bs:hover {
+  background-image: url("../images/avatar.png"); }
+
+#bl {
+  background-image: url("../images/Billy_Lan.JPG"); }
+
+#bl:hover {
+  background-image: url("../images/avatar.png"); }
 
 body {
   font-family: Verdana;
   font-size: 1.5em; }
   body #team-members {
-    clear: both; }
-    body #team-members img {
-      width: 200px;
-      height: 200px; }
+    float: left; }
+    body #team-members .member {
+      float: left;
+      margin: 10px;
+      padding: 6px; }
+      body #team-members .member .image {
+        width: 200px;
+        height: 200px;
+        z-index: 100;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      body #team-members .member .name {
+        text-align: center; }

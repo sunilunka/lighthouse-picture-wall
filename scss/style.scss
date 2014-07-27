@@ -1,28 +1,63 @@
-$primaryColor: #FF0000;
-
-
-.member {
-  float: left;
-  margin: 10px;
-  padding: 6px;
+#wr {
+  background-image: url('../images/Warren_Russell.JPG');
 }
 
-.name {
-  text-align: center;
+#wr:hover {
+  background-image: url('../images/avatar.png');
+}
+
+#as {
+  background-image: url('../images/Andre_Soesilo.JPG')
+}
+
+#as:hover {
+  background-image: url('../images/avatar.png');
+}
+
+#ak {
+  background-image: url('../images/Andrew_Kong.JPG');
+}
+
+#ak:hover {
+  background-image: url('../images/avatar.png');
+}
+
+#bs {
+  background-image: url('../images/Barrett_Stutzman.JPG');
+}
+
+#bs:hover {
+  background-image: url('../images/avatar.png');
+}
+
+#bl {
+  background-image: url('../images/Billy_Lan.JPG');
+}
+
+#bl:hover {
+  background-image: url('../images/avatar.png');
 }
 
 body {
   font-family: Verdana;
   font-size: 1.5em;
   #team-members {
-    clear:both;
-    @extend .member;
-    img {
-      width: 200px;
-      height: 200px;
-    }
-    div {
-      @extend .name;
+    float:left;
+    .member{;
+      float:left;
+      margin:10px;
+      padding:6px;
+      .image {
+          width: 200px;
+          height: 200px;
+          z-index: 100;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      .name {
+        text-align:center;
+      }
     }
   }
 }
