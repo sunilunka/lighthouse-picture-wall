@@ -1,9 +1,16 @@
+@mixin transform_element($parameters) {
+  transform: $parameters;
+  -webkit-transform: $parameters;
+  -ms-transform: $parameters;
+}
+
+
 #wr {
   background-image: url('../images/Warren_Russell.JPG');
 }
 
 #wr:hover {
-  background-image: url('../images/avatar.png');
+  background-image: url('../images/Warren_Russell_mod.jpg');
 }
 
 #as {
@@ -11,7 +18,7 @@
 }
 
 #as:hover {
-  background-image: url('../images/avatar.png');
+  background-image: url('../images/Andre_Soesilo_mod.jpg');
 }
 
 #ak {
@@ -19,7 +26,7 @@
 }
 
 #ak:hover {
-  background-image: url('../images/avatar.png');
+  background-image: url('../images/Andrew_Kong_mod.jpg');
 }
 
 #bs {
@@ -27,7 +34,7 @@
 }
 
 #bs:hover {
-  background-image: url('../images/avatar.png');
+  background-image: url('../images/Barrett_Stutzman_mod.jpg');
 }
 
 #bl {
@@ -35,11 +42,14 @@
 }
 
 #bl:hover {
-  background-image: url('../images/avatar.png');
+  background-image: url('../images/Billy_Lan_mod.jpg');
 }
 
+
+
+
 body {
-  font-family: Verdana;
+  font-family: Helvetica;
   font-size: 1.5em;
   #team-members {
     float:left;
@@ -47,13 +57,29 @@ body {
       float:left;
       margin:10px;
       padding:6px;
+      transition: all 1s;
+      &:nth-child(odd):hover {
+       @include transform_element(rotate(10deg)); 
+      }
+      &:nth-child(even):hover {
+        @include transform_element(scale(1.5,1.5))
+      }
       .image {
-          width: 200px;
+        width: 200px;
+        height: 200px;
+        z-index: 100;
+        border-radius: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 2px black;
+        transition: background-image 1s;
+        -webkit-transition: background-image 1s;
+        a {
+          position: absolute;
           height: 200px;
-          z-index: 100;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+          width: 200px;
+        }  
       }
       .name {
         text-align:center;
