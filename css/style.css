@@ -1,19 +1,16 @@
-body {
-  font-family: Verdana;
-  font-size: 1.5em; }
-
-#team-members {
-  clear: both; }
-
-#team-members .member {
+.member, body #team-members {
   float: left;
-  /*border: 1px solid gray;*/
   margin: 10px;
   padding: 6px; }
 
-#team-members .member img {
-  width: 200px;
-  height: 200px; }
-
-#team-members .member div.name {
+.name, body #team-members div {
   text-align: center; }
+
+body {
+  font-family: Verdana;
+  font-size: 1.5em; }
+  body #team-members {
+    clear: both; }
+    body #team-members img {
+      width: 200px;
+      height: 200px; }

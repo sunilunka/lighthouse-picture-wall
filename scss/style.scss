@@ -1,24 +1,48 @@
-body {
-  font-family: Verdana;
-  font-size: 1.5em;
-}
+$primaryColor: #FF0000;
 
-#team-members {
-  clear: both;
-}
 
-#team-members .member {
+.member {
   float: left;
-  /*border: 1px solid gray;*/
   margin: 10px;
   padding: 6px;
 }
 
-#team-members .member img {
-  width: 200px;
-  height: 200px;
+.name {
+  text-align: center;
 }
 
-#team-members .member div.name {
-  text-align: center;  
+body {
+  font-family: Verdana;
+  font-size: 1.5em;
+  #team-members {
+    clear:both;
+    @extend .member;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    div {
+      @extend .name;
+    }
+  }
 }
+
+// #team-members {
+//   clear: both;
+// }
+
+// #team-members .member {
+//   float: left;
+//   /*border: 1px solid gray;*/
+//   margin: 10px;
+//   padding: 6px;
+// }
+
+// #team-members .member img {
+//   width: 200px;
+//   height: 200px;
+// }
+
+// #team-members .member div.name {
+//   text-align: center;  
+// }
